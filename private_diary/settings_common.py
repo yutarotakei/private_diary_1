@@ -32,6 +32,7 @@ SECRET_KEY = '8ed@*74j#noth76y#l)%$_^!f(zzbz9s=3x$g36b_fvk+%u211'
 
 INSTALLED_APPS = [
     'django.contrib.admin',
+
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
@@ -40,6 +41,10 @@ INSTALLED_APPS = [
 
     'diary.apps.DiaryConfig',
     'accounts.apps.AccountsConfig',
+
+    'django.contrib.sites',
+    'allauth',
+    'allauth.account',
 ]
 
 MIDDLEWARE = [
@@ -139,3 +144,20 @@ MESSAGE_TAGS = {
 }
 
 AUTH_USER_MODEl = 'accounts.CustomUser'
+
+SITE_ID = 1
+AUTHENTIFICATION_BACKENDS = (
+    'allauth.account.auth_backends.AuthentificationBackend', 'django.contrib.auth.backends.ModelBackend',
+)
+
+ACCOUNT_AUTHENTIFICATION_METHOD = 'email'
+ACCOUNT_USERNAME_REQUIRED = 'False'
+
+ACCOUNT_EMAIL_VERIFICATION = 'mandatory'
+ACCOUNT_EMAIL_REQUIRED = True
+
+LOGIN_REDIRECT_URL = 'diary:index'
+ACCOUNT_LOGOUT_REDIRECT_URL = 'account_login'
+
+ACCOUNT_LOGOUT_ON_GET = True
+
