@@ -1,0 +1,9 @@
+body,#wrapper {
+display: felx;
+flex-direction: column;
+min-height: 100vh;
+}
+
+footer {
+margin-top: auto;
+}
