@@ -17,9 +17,12 @@ from django.contrib import admin
 from django.urls import path
 from django.contrib import admin
 from django.urls import path, include
+from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('diary.urls')),
     path('accounts/', include('allauth.urls')),
 ]
+
+urlpatterns += staic(settings_common.MEDIA_URL, document_root=settings_dev.MEDEA_ROOT)
