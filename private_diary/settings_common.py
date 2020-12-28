@@ -31,6 +31,7 @@ SECRET_KEY = '8ed@*74j#noth76y#l)%$_^!f(zzbz9s=3x$g36b_fvk+%u211'
 # Application definition
 
 INSTALLED_APPS = [
+
     'django.contrib.admin',
 
     'django.contrib.auth',
@@ -85,7 +86,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'private_diary',
-        'USER': os.environ.get('DB_PASSWORD'),
+        'USER': os.environ.get('DB_USER'),
+        'PASSWORD': os.environ.get('DB_PASSWORD'),
         'HOST': '',
         'POST': '',
     }
