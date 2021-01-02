@@ -46,6 +46,8 @@ INSTALLED_APPS = [
     'django.contrib.sites',
     'allauth',
     'allauth.account',
+
+    'private_diary',
 ]
 
 MIDDLEWARE = [
