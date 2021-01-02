@@ -48,6 +48,8 @@ INSTALLED_APPS = [
     'allauth.account',
 
     'private_diary',
+    'accounts',
+    'diary',
 ]
 
 MIDDLEWARE = [
