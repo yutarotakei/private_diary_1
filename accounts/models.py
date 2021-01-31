@@ -1,7 +1,7 @@
-from django.contrib.auth.models import AbstractUser
+from django.contrib.auth.models import AbstractUser, User
 
 
-class CustomUser(AbstractUser):
+class CustomUser(User):
     """拡張ユーザーモデル"""
 
     class Meta:
