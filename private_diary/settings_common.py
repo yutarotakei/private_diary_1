@@ -42,6 +42,9 @@ INSTALLED_APPS = [
     'diary.apps.DiaryConfig',
     'accounts',
     'django.contrib.sites',
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
 ]
 
 MIDDLEWARE = [
