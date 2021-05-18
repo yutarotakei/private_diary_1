@@ -4,7 +4,7 @@
 
 {% block active_login %}active{% endblock %}
 
-{% block_contents %}
+{% block contents %}
 <div class="container">
     <div class="row">
         <div class="my-div-style">
@@ -19,7 +19,7 @@
                 {% endif %}
 
                 <button class="btn btn-primary" type="submit">ログイン</button>
-                <p><a class="button secondaryAction" href="{% url 'account_reset_pssword' %}>パスワードを忘れました？</a?</p>
+                <p><a class="button secondaryAction" href="{% url 'account_reset_password' %}>パスワードを忘れました？</a></p>
             </form>
         </div>
     </div>
